@@ -1,11 +1,11 @@
 const axios = require("axios");
 
 const msgs = [
-    
+    "alo","haha","heeh"
 ]
 
 // ngày bắt đầu thực hiện gửi tin nhắn
-const START_DATE = new Date("2020-12-28");
+const START_DATE = new Date("2022-10-06");
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
 function diffDate() {
@@ -17,8 +17,8 @@ function diffDate() {
 
 const sendMessage = async () => {
     const i = diffDate();
-    let url = "https://XXXXX.herokuapp.com/api/send"
-    const { data } = await axios.get(url, { params: { uid: YYYYYYY, msg: msgs[i]} });
+    let url = "https://sendyourcrushamessage.herokuapp.com/api/send"
+    const { data } = await axios.get(url, { params: { uid: 100014358183324, msg: msgs[i]} });
 };
 
 sendMessage();
